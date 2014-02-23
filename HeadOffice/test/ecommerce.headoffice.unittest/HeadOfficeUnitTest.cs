@@ -42,17 +42,8 @@ namespace ecommerce.headoffice.unittest
         [Test]
         public void InsertTest()
         {
-            //Add first
             _repository.Add(headOfficeStub1);
             _repository.SaveChanges();
-
-            //Check whether on database or not
-            //merk = _repository.(headOfficeStub1.Id);
-            //Assert.IsNotNull(merk, "Merk Berhasil Terbuat");
-
-            //Delete so this method can be used again
-            //_repository.Delete(merkStub1);
-            //_repository.SaveChanges();
         }
     }
 }
