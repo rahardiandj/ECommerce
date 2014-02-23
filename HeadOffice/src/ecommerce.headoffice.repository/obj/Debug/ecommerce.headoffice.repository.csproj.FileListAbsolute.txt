@@ -1,0 +1,12 @@
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\obj\Debug\ecommerce.headoffice.repository.csprojResolveAssemblyReference.cache
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\db_commerce.sdf
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.headoffice.repository.dll
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.headoffice.repository.pdb
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.core.dll
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.datamodel.dll
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.headoffice.dll
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.core.pdb
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.datamodel.pdb
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\bin\Debug\ecommerce.headoffice.pdb
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\obj\Debug\ecommerce.headoffice.repository.dll
+E:\E_Commerce\HeadOffice\src\ecommerce.headoffice.repository\obj\Debug\ecommerce.headoffice.repository.pdb

@@ -1,0 +1,4 @@
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand\bin\Debug\binacitra.headoffice.brand.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand\bin\Debug\binacitra.headoffice.brand.pdb
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand\obj\Debug\binacitra.headoffice.brand.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand\obj\Debug\binacitra.headoffice.brand.pdb

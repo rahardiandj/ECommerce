@@ -1,0 +1,11 @@
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\binacitra.headoffice.brand.reporting.dll.config
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\binacitra.headoffice.brand.reporting.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\binacitra.headoffice.brand.reporting.pdb
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\dokuku.mongoconfiguration.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\MongoDB.Bson.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\MongoDB.Driver.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\dokuku.mongoconfiguration.xml
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\MongoDB.Bson.xml
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\bin\Debug\MongoDB.Driver.xml
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\obj\Debug\binacitra.headoffice.brand.reporting.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.reporting\obj\Debug\binacitra.headoffice.brand.reporting.pdb

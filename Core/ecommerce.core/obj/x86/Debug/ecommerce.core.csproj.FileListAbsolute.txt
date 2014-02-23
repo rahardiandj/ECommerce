@@ -1,0 +1,5 @@
+E:\E_Commerce\Core\ecommerce.core\bin\Debug\ecommerce.core.dll
+E:\E_Commerce\Core\ecommerce.core\bin\Debug\ecommerce.core.pdb
+E:\E_Commerce\Core\ecommerce.core\obj\x86\Debug\ecommerce.core.dll
+E:\E_Commerce\Core\ecommerce.core\obj\x86\Debug\ecommerce.core.pdb
+E:\E_Commerce\Core\ecommerce.core\obj\x86\Debug\ecommerce.core.csprojResolveAssemblyReference.cache

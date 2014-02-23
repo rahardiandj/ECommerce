@@ -1,0 +1,7 @@
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\bin\Debug\binacitra.headoffice.brand.appservices.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\bin\Debug\binacitra.headoffice.brand.appservices.pdb
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\bin\Debug\binacitra.headoffice.brand.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\bin\Debug\binacitra.headoffice.brand.pdb
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\obj\Debug\binacitra.headoffice.brand.appservices.csprojResolveAssemblyReference.cache
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\obj\Debug\binacitra.headoffice.brand.appservices.dll
+E:\Inforsys\Dokuku\Bina-Citra-HeadOffice\Brand\src\binacitra.headoffice.brand.appservices\obj\Debug\binacitra.headoffice.brand.appservices.pdb

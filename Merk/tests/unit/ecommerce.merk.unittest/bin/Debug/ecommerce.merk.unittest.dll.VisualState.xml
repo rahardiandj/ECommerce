@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1002]E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll</TopNode>
+  <SelectedNode>[0-1002]E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1002]E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" Expanded="true" />
+    <Node UniqueName="[0-1003]ecommerce" Expanded="true" />
+    <Node UniqueName="[0-1004]ecommerce.merk" Expanded="true" />
+    <Node UniqueName="[0-1005]ecommerce.merk.unittest" Expanded="true" />
+    <Node UniqueName="[0-1000]ecommerce.merk.unittest.MerkUnitTest" Expanded="true" />
+  </Nodes>
+</VisualState>

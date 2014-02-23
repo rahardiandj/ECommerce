@@ -1,0 +1,12 @@
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\obj\Debug\ecommerce.merk.repository.csprojResolveAssemblyReference.cache
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.merk.repository.dll
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.merk.repository.pdb
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.core.dll
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.core.pdb
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\obj\Debug\ecommerce.merk.repository.dll
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\obj\Debug\ecommerce.merk.repository.pdb
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\db_commerce.sdf
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.datamodel.dll
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.datamodel.pdb
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.merk.brand.dll
+E:\E_Commerce\Merk\src\ecommerce.merk.repository\bin\Debug\ecommerce.merk.brand.pdb

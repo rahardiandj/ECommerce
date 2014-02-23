@@ -1,0 +1,9 @@
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\bin\Debug\binacitra.headoffice.brand.reporting.dll.config
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\bin\Debug\binacitra.headoffice.brand.reporting.dll
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\bin\Debug\binacitra.headoffice.brand.reporting.pdb
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\bin\Debug\dokuku.mongoconfiguration.xml
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\bin\Debug\MongoDB.Bson.xml
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\bin\Debug\MongoDB.Driver.xml
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\obj\Debug\ecommerce.merk.report.csprojResolveAssemblyReference.cache
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\obj\Debug\binacitra.headoffice.brand.reporting.dll
+E:\E_Commerce\Merk\src\binacitra.headoffice.brand.reporting\obj\Debug\binacitra.headoffice.brand.reporting.pdb
