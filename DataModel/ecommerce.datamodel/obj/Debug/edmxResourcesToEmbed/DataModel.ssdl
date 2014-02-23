@@ -4,6 +4,7 @@
     <EntitySet Name="HeadOffice" EntityType="db_commerceModel.Store.HeadOffice" store:Type="Tables" />
     <EntitySet Name="MarketArea" EntityType="db_commerceModel.Store.MarketArea" store:Type="Tables" />
     <EntitySet Name="Merk" EntityType="db_commerceModel.Store.Merk" store:Type="Tables" />
+    <EntitySet Name="Store" EntityType="db_commerceModel.Store.Store" store:Type="Tables" />
   </EntityContainer>
   <EntityType Name="HeadOffice">
     <Key>
@@ -38,5 +39,17 @@
     <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="Code" Type="nvarchar" MaxLength="100" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
   </EntityType>
 </Schema>

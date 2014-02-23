@@ -1,0 +1,10 @@
+E:\E_Commerce\Store\src\ecommerce.store\obj\Debug\ecommerce.store.csprojResolveAssemblyReference.cache
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\db_commerce.sdf
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\ecommerce.store.dll
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\ecommerce.store.pdb
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\ecommerce.core.dll
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\ecommerce.datamodel.dll
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\ecommerce.core.pdb
+E:\E_Commerce\Store\src\ecommerce.store\bin\Debug\ecommerce.datamodel.pdb
+E:\E_Commerce\Store\src\ecommerce.store\obj\Debug\ecommerce.store.dll
+E:\E_Commerce\Store\src\ecommerce.store\obj\Debug\ecommerce.store.pdb

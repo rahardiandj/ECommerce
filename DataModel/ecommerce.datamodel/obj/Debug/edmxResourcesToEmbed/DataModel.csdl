@@ -4,6 +4,7 @@
     <EntitySet Name="Merks" EntityType="db_commerceModel.Merk" />
     <EntitySet Name="HeadOffices" EntityType="db_commerceModel.HeadOffice" />
     <EntitySet Name="MarketAreas" EntityType="db_commerceModel.MarketArea" />
+    <EntitySet Name="Stores" EntityType="db_commerceModel.Store" />
   </EntityContainer>
   <EntityType Name="Merk">
     <Key>
@@ -38,5 +39,17 @@
     <Property Type="String" Name="Descriotion" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Type="DateTime" Name="CreatedDate" />
     <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Code" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="String" Name="CreateBy" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

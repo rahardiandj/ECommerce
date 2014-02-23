@@ -13,10 +13,12 @@ namespace ecommerce.merk.repository
     public class MerkRepository : GenericRepository<Merk>, IMerkRepository
     {
         #region Constructor
+
         public MerkRepository(IObjectContextManager objectContextManager)
             : base(objectContextManager)
         {
         }
+
         #endregion
 
         /// <summary>
