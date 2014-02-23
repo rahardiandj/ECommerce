@@ -96,6 +96,22 @@ namespace ecommerce.datamodel
             }
         }
         private ObjectSet<HeadOffice> _HeadOffices;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<MarketArea> MarketAreas
+        {
+            get
+            {
+                if ((_MarketAreas == null))
+                {
+                    _MarketAreas = base.CreateObjectSet<MarketArea>("MarketAreas");
+                }
+                return _MarketAreas;
+            }
+        }
+        private ObjectSet<MarketArea> _MarketAreas;
 
         #endregion
 
@@ -115,6 +131,14 @@ namespace ecommerce.datamodel
         public void AddToHeadOffices(HeadOffice headOffice)
         {
             base.AddObject("HeadOffices", headOffice);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the MarketAreas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMarketAreas(MarketArea marketArea)
+        {
+            base.AddObject("MarketAreas", marketArea);
         }
 
         #endregion
@@ -322,6 +346,231 @@ namespace ecommerce.datamodel
         private Nullable<global::System.DateTime> _CreateDate;
         partial void OnCreateDateChanging(Nullable<global::System.DateTime> value);
         partial void OnCreateDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="db_commerceModel", Name="MarketArea")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MarketArea : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MarketArea object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        public static MarketArea CreateMarketArea(global::System.Guid id)
+        {
+            MarketArea marketArea = new MarketArea();
+            marketArea.Id = id;
+            return marketArea;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _Id;
+        partial void OnIdChanging(global::System.Guid value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CodeArea
+        {
+            get
+            {
+                return _CodeArea;
+            }
+            set
+            {
+                OnCodeAreaChanging(value);
+                ReportPropertyChanging("CodeArea");
+                _CodeArea = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CodeArea");
+                OnCodeAreaChanged();
+            }
+        }
+        private global::System.String _CodeArea;
+        partial void OnCodeAreaChanging(global::System.String value);
+        partial void OnCodeAreaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String City
+        {
+            get
+            {
+                return _City;
+            }
+            set
+            {
+                OnCityChanging(value);
+                ReportPropertyChanging("City");
+                _City = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("City");
+                OnCityChanged();
+            }
+        }
+        private global::System.String _City;
+        partial void OnCityChanging(global::System.String value);
+        partial void OnCityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Country
+        {
+            get
+            {
+                return _Country;
+            }
+            set
+            {
+                OnCountryChanging(value);
+                ReportPropertyChanging("Country");
+                _Country = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Country");
+                OnCountryChanged();
+            }
+        }
+        private global::System.String _Country;
+        partial void OnCountryChanging(global::System.String value);
+        partial void OnCountryChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descriotion
+        {
+            get
+            {
+                return _Descriotion;
+            }
+            set
+            {
+                OnDescriotionChanging(value);
+                ReportPropertyChanging("Descriotion");
+                _Descriotion = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Descriotion");
+                OnDescriotionChanged();
+            }
+        }
+        private global::System.String _Descriotion;
+        partial void OnDescriotionChanging(global::System.String value);
+        partial void OnDescriotionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> CreatedDate
+        {
+            get
+            {
+                return _CreatedDate;
+            }
+            set
+            {
+                OnCreatedDateChanging(value);
+                ReportPropertyChanging("CreatedDate");
+                _CreatedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedDate");
+                OnCreatedDateChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _CreatedDate;
+        partial void OnCreatedDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnCreatedDateChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

@@ -2,6 +2,7 @@
 <Schema Namespace="db_commerceModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="db_commerceModelStoreContainer">
     <EntitySet Name="HeadOffice" EntityType="db_commerceModel.Store.HeadOffice" store:Type="Tables" />
+    <EntitySet Name="MarketArea" EntityType="db_commerceModel.Store.MarketArea" store:Type="Tables" />
     <EntitySet Name="Merk" EntityType="db_commerceModel.Store.Merk" store:Type="Tables" />
   </EntityContainer>
   <EntityType Name="HeadOffice">
@@ -15,6 +16,19 @@
     <Property Name="City" Type="nvarchar" MaxLength="100" />
     <Property Name="Country" Type="nvarchar" MaxLength="100" />
     <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MarketArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CodeArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" />
+    <Property Name="Descriotion" Type="ntext" />
+    <Property Name="CreatedDate" Type="datetime" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Merk">

@@ -1,0 +1,10 @@
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\obj\Debug\ecommerce.marketarea.csprojResolveAssemblyReference.cache
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\db_commerce.sdf
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\ecommerce.marketarea.dll
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\ecommerce.marketarea.pdb
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\ecommerce.core.dll
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\ecommerce.datamodel.dll
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\ecommerce.core.pdb
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\bin\Debug\ecommerce.datamodel.pdb
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\obj\Debug\ecommerce.marketarea.dll
+E:\E_Commerce\MarketArea\src\ecommerce.marketarea\obj\Debug\ecommerce.marketarea.pdb
