@@ -7,6 +7,7 @@ using System.Data.Objects;
 using ecommerce.core;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System.Security.Principal;
 
 namespace ecommerce.merk.repository
 {
@@ -37,6 +38,8 @@ namespace ecommerce.merk.repository
         /// <param name="entity"></param>
         public override void Add(Merk entity)
         {
+            entity.CreatedBy = Environment.UserName;
+            entity.CreateDate = DateTime.Now;
             Entities.AddObject(entity);
         }
 

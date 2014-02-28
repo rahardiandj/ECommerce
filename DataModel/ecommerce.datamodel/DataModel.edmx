@@ -44,6 +44,9 @@
           <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="100" />
           <Property Name="Code" Type="nvarchar" MaxLength="100" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Manufacture" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateDate" Type="datetime" />
         </EntityType>
         <EntityType Name="Store">
           <Key>
@@ -62,19 +65,11 @@
     <edmx:ConceptualModels>
       <Schema Namespace="db_commerceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="db_commerceEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Merks" EntityType="db_commerceModel.Merk" />
           <EntitySet Name="HeadOffices" EntityType="db_commerceModel.HeadOffice" />
           <EntitySet Name="MarketAreas" EntityType="db_commerceModel.MarketArea" />
           <EntitySet Name="Stores" EntityType="db_commerceModel.Store" />
+          <EntitySet Name="Merks" EntityType="db_commerceModel.Merk" />
         </EntityContainer>
-        <EntityType Name="Merk">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Type="String" Name="Id" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Code" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="HeadOffice">
           <Key>
             <PropertyRef Name="Id" />
@@ -113,21 +108,23 @@
           <Property Type="DateTime" Name="CreatedDate" />
           <Property Type="String" Name="CreateBy" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Merk">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Manufacture" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="db_commerceModelStoreContainer" CdmEntityContainer="db_commerceEntities">
-          <EntitySetMapping Name="Merks">
-            <EntityTypeMapping TypeName="db_commerceModel.Merk">
-              <MappingFragment StoreEntitySet="Merk">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="HeadOffices">
             <EntityTypeMapping TypeName="db_commerceModel.HeadOffice">
               <MappingFragment StoreEntitySet="HeadOffice">
@@ -169,6 +166,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Merks">
+            <EntityTypeMapping TypeName="db_commerceModel.Merk">
+              <MappingFragment StoreEntitySet="Merk">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -190,10 +199,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="Model1">
-        <EntityTypeShape EntityType="db_commerceModel.Merk" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5956835937499996" />
         <EntityTypeShape EntityType="db_commerceModel.HeadOffice" Width="1.5" PointX="3.375" PointY="0.75" Height="2.5571907552083326" />
         <EntityTypeShape EntityType="db_commerceModel.MarketArea" Width="1.5" PointX="0.75" PointY="3.75" Height="2.5571907552083335" />
         <EntityTypeShape EntityType="db_commerceModel.Store" Width="1.5" PointX="3.375" PointY="4.75" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="db_commerceModel.Merk" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906249996" />
       </Diagram>
     </Diagrams>
   </Designer>

@@ -18,7 +18,7 @@ namespace ecommerce.marketarea.unittest
 
         private MarketArea marketAreaStub1 = new MarketArea()
         {
-            Id = Guid.NewGuid(),
+            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc1e"),
             City = "Bandung",
             CodeArea = "BDO",
             Country = "Indonesia",

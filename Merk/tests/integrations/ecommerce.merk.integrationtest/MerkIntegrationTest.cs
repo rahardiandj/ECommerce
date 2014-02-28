@@ -30,6 +30,7 @@ namespace ecommerce.merk.integrationtest
             var repository = Substitute.For<IMerkRepository>();
             service = new MerkDomainService(repository);
             repository.GetById("001").Returns(merk);
+            repository.GetById("002").Returns(new Merk());
             //repository.Add(Arg.Is<Merk>(merk));
             //merkRepositoryMock = new DynamicMock(typeof(IMerkRepository));
             //merkRepositoryMock.SetReturnValue("GetById", merk);
@@ -47,6 +48,12 @@ namespace ecommerce.merk.integrationtest
         public void GetMerkById()
         {
             Assert.IsNotNull(service.GetMerkById("001"));
+        }
+        [Test]
+        public void GetMerkIfNotExist()
+        {
+            string message = service.GetMerkById("002").Messages.FirstOrDefault().ToString();
+            Assert.AreEqual(message, "Data is not in Database");
         }
     }
 }

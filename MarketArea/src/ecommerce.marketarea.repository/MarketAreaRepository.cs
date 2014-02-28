@@ -6,6 +6,7 @@ using ecommerce.datamodel;
 using ecommerce.marketarea.repositories;
 using ecommerce.core;
 using System.Collections.ObjectModel;
+using System.Security.Principal;
 
 namespace ecommerce.marketarea.repository
 {
@@ -23,6 +24,8 @@ namespace ecommerce.marketarea.repository
 
         public override void Add(MarketArea entity)
         {
+            entity.CreatedBy = Environment.UserName;
+            entity.CreatedDate = DateTime.Now;
             Entities.AddObject(entity);
         }
 

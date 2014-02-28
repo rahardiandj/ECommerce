@@ -5,6 +5,7 @@ using ecommerce.merk.exceptions;
 using ecommerce.merk.repositories;
 using ecommerce.core;
 using ecommerce.datamodel;
+using System.Collections.ObjectModel;
 
 namespace ecommerce.merk
 {
@@ -17,38 +18,70 @@ namespace ecommerce.merk
             _merkRepository = merkRepository;
         }
 
-        public MerkDomain Create(string id, string code, string name)
+        public MerkServiceResponse Create(MerkDomain merk)
         {
-           CreateParameter param = new CreateParameter(id, code, name);
-           AssertCodeNotExist(id, code);
-           var merk = MerkDomain.Create(param);
-           MergeExtension.Merge(merkEntity, merk);
-           _merkRepository.Add(merkEntity);
-           return merk;
+            MerkServiceResponse response = new MerkServiceResponse();
+           
+            
+            if (!validateIsNotExist(merk.Id.OwnerId))
+                response.Messages.Add(new Message("Data is already on database"));
+            else
+            {
+                MergeExtension.Merge(merkEntity, merk);
+                _merkRepository.Add(merkEntity);
+                _merkRepository.SaveChanges();
+            }
+
+            return response;
         }
 
-        public void ChangeName(string ownerId, string code, string name)
+        public MerkServiceResponse Update(MerkDomain merk)
         {
-            MerkId id = new MerkId(ownerId, code);
-            //var merk = _merkRepository.GetById(;
-            //brand.ChangeName(name);
-            //brandRepository.Update(brand);
+            MerkServiceResponse response = new MerkServiceResponse();
+
+            if (!validateIsNotExist(merk.Id.OwnerId))
+                response.Messages.Add(new Message("Data is not in Database"));
+            else
+            {
+                MergeExtension.Merge(merkEntity, merk);
+
+                _merkRepository.Update(merkEntity);
+                _merkRepository.SaveChanges();
+            }
+            return response;
+
         }
 
-        public MerkDomain GetMerkById(string id)
+        public MerkServiceResponse GetMerkById(string id)
         {
-            Merk merk = _merkRepository.GetById(id);
-            CreateParameter param = new CreateParameter(merk.Id, merk.Code, merk.Name);
-            MerkDomain merkDomain = MerkDomain.Create(param);
-            //MergeExtension.Merge(merkDomain, merk);
-            return merkDomain;
+            MerkServiceResponse response = new MerkServiceResponse();
+
+            if (!validateIsNotExist(id))
+            {
+                response.Messages.Add(new Message("Data is not in Database"));
+            }
+            else
+            {
+                Merk merk = _merkRepository.GetById(id);
+                CreateParameter param = new CreateParameter(merk.Id, merk.Code, merk.Name,merk.Manufacture);
+                response.MerkDomain = MerkDomain.Create(param);
+            }
+            return response;
         }
 
-        private void AssertCodeNotExist(string ownerId, string code)
+        public MerkServiceResponse GetAllMerk()
         {
-            //MerkId id = new MerkId(ownerId, code);
-            //if (brandRepository.IsExist(id))
-            //    throw new CodeBrandAlreadyExistException(code);
+            MerkServiceResponse response = new MerkServiceResponse();
+            Collection<Merk> merks = _merkRepository.GetAll();
+            
+            foreach (var m in merks)
+            {
+                CreateParameter param = new CreateParameter(m.Id,m.Code,m.Name,m.Manufacture);
+                MerkDomain merk = MerkDomain.Create(param);
+                MergeExtension.Merge(merk,m);
+                response.MerkDomains.Add(merk);
+            }
+            return response;
         }
 
         public void Delete(string ownerId, string code)
@@ -56,5 +89,28 @@ namespace ecommerce.merk
             //MerkId id = new MerkId(ownerId, code);
             //brandRepository.Remove(id);
         }
+
+        private bool validateIsNotExist(string id)
+        {
+            Merk merk = _merkRepository.GetById(id);
+            return merk == null;
+        }
     }
+
+    #region Messages
+    /// <summary>
+    /// Merk Service Message 
+    /// </summary>
+    public class MerkServiceResponse : ResponseBase
+    {
+        public MerkDomain MerkDomain { get; set; }
+
+        private Collection<MerkDomain> _merkDomains;
+
+        public Collection<MerkDomain> MerkDomains
+        {
+            get { return _merkDomains ?? (_merkDomains = new Collection<MerkDomain>()); }
+        }
+    }
+    #endregion
 }

@@ -6,6 +6,7 @@ using ecommerce.datamodel;
 using ecommerce.headoffice.repositories;
 using ecommerce.core;
 using System.Collections.ObjectModel;
+using System.Security.Principal;
 
 namespace ecommerce.headoffice.repository
 {
@@ -22,6 +23,8 @@ namespace ecommerce.headoffice.repository
 
         public override void Add(HeadOffice entity)
         {
+            entity.CreatedBy = Environment.UserName;
+            entity.CreateDate = DateTime.Now;
             Entities.AddObject(entity);
         }
 

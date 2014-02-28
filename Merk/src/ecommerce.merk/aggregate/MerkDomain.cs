@@ -7,6 +7,7 @@ namespace ecommerce.merk.aggregate
     {
         public MerkId Id { get; private set; }
         public string Name { get; private set; }
+        public string Manufacture { get; private set; }
 
         public static MerkDomain Create(CreateParameter param)
         {
@@ -22,6 +23,7 @@ namespace ecommerce.merk.aggregate
         {
             this.Id = new MerkId(param.OwnerId, param.Code);
             this.Name = param.Name;
+            this.Manufacture = param.Manufacture;
         }
     }
 }

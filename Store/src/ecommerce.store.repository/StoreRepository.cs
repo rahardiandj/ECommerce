@@ -22,6 +22,8 @@ namespace ecommerce.store.repository
 
         public override void Add(Store entity)
         {
+            entity.CreateBy = Environment.UserName;
+            entity.CreatedDate = DateTime.Now;
             Entities.AddObject(entity);
         }
 
@@ -66,6 +68,10 @@ namespace ecommerce.store.repository
             return results;
         }
 
+        public int Kali(int a, int b)
+        {
+            return a * b;
+        }
 
         #region Not Implemented
 

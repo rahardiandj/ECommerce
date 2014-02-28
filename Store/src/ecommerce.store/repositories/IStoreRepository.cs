@@ -10,5 +10,7 @@ namespace ecommerce.store.repositories
     public interface IStoreRepository : IDALRepository<Store>
     {
         Store GetById(Guid id);
+
+        int Kali(int a, int b);
     }
 }

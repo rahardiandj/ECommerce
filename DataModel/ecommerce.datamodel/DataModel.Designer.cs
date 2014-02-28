@@ -68,22 +68,6 @@ namespace ecommerce.datamodel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Merk> Merks
-        {
-            get
-            {
-                if ((_Merks == null))
-                {
-                    _Merks = base.CreateObjectSet<Merk>("Merks");
-                }
-                return _Merks;
-            }
-        }
-        private ObjectSet<Merk> _Merks;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<HeadOffice> HeadOffices
         {
             get
@@ -128,18 +112,26 @@ namespace ecommerce.datamodel
             }
         }
         private ObjectSet<Store> _Stores;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Merk> Merks
+        {
+            get
+            {
+                if ((_Merks == null))
+                {
+                    _Merks = base.CreateObjectSet<Merk>("Merks");
+                }
+                return _Merks;
+            }
+        }
+        private ObjectSet<Merk> _Merks;
 
         #endregion
 
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Merks EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToMerks(Merk merk)
-        {
-            base.AddObject("Merks", merk);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the HeadOffices EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -163,6 +155,14 @@ namespace ecommerce.datamodel
         public void AddToStores(Store store)
         {
             base.AddObject("Stores", store);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Merks EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMerks(Merk merk)
+        {
+            base.AddObject("Merks", merk);
         }
 
         #endregion
@@ -724,6 +724,78 @@ namespace ecommerce.datamodel
         private global::System.String _Name;
         partial void OnNameChanging(global::System.String value);
         partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Manufacture
+        {
+            get
+            {
+                return _Manufacture;
+            }
+            set
+            {
+                OnManufactureChanging(value);
+                ReportPropertyChanging("Manufacture");
+                _Manufacture = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Manufacture");
+                OnManufactureChanged();
+            }
+        }
+        private global::System.String _Manufacture;
+        partial void OnManufactureChanging(global::System.String value);
+        partial void OnManufactureChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> CreateDate
+        {
+            get
+            {
+                return _CreateDate;
+            }
+            set
+            {
+                OnCreateDateChanging(value);
+                ReportPropertyChanging("CreateDate");
+                _CreateDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreateDate");
+                OnCreateDateChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _CreateDate;
+        partial void OnCreateDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnCreateDateChanged();
 
         #endregion
 

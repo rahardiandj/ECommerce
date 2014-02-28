@@ -1,4 +1,3 @@
-E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\obj\Debug\ecommerce.marketarea.unittest.csprojResolveAssemblyReference.cache
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\db_commerce.sdf
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\ecommerce.marketarea.unittest.dll.config
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\ecommerce.marketarea.unittest.dll
@@ -24,5 +23,6 @@ E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\Castle.Win
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\bin\Debug\nunit.framework.xml
+E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\obj\Debug\ecommerce.marketarea.unittest.csprojResolveAssemblyReference.cache
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\obj\Debug\ecommerce.marketarea.unittest.dll
 E:\E_Commerce\MarketArea\test\ecommerce.marketarea.unittest\obj\Debug\ecommerce.marketarea.unittest.pdb

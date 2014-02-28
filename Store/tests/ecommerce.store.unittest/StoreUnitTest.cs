@@ -16,11 +16,12 @@ namespace ecommerce.store.unittest
             Code = "SPT",
             CreateBy = "rahardian",
             CreatedDate = DateTime.Now,
-            Id = Guid.NewGuid(),
+            Id = new Guid("9266e2e6-798d-4910-9fbb-29c4a2a1c4a7"),
             Name = "SportStation",
             Location = "Paris Van Java",
             Type = "Outlet"
         };
+
 
         #region Test Initialization
 
@@ -36,6 +37,8 @@ namespace ecommerce.store.unittest
 
         #endregion
 
+        #region Test Method
+
         [Test]
         public void InsertTest()
         {
@@ -43,7 +46,21 @@ namespace ecommerce.store.unittest
             _repository.SaveChanges();
         }
 
+        [Test]
+        public void GetByIdStoreTest()
+        {
+            Store store = _repository.GetById(storeStub1.Id);
+            Assert.IsNotNull(store);
+        }
 
+
+        [Test]
+        public void KaliStoreTest()
+        {
+            int c = _repository.Kali(5, 2);
+            Assert.AreEqual(c, 10);
+        }
+        #endregion
 
     }
 }

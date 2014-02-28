@@ -28,17 +28,22 @@ namespace ecommerce.merk.unittest
 
         private Merk merkStub1 = new Merk()
         {
-            Id = "004",
+            Id = "007",
             Code = "B",
-            Name = "Billabong"
+            Name = "Billabong",
+            Manufacture = "Billabong"
         };
 
         private Merk merkUpdateStub = new Merk()
         {
             Id = "X",
             Code = "X",
-            Name = "Planet Surf"
+            Name = "Planet Surf",
+            Manufacture = "Billabong",
         };
+
+           
+            
 
         #endregion
 
@@ -77,7 +82,7 @@ namespace ecommerce.merk.unittest
         }
 
         [Test]
-        public void GetMerkTest()
+        public void GetByIdMerkTest()
         {
             merk = _repository.GetById("X"); 
             Assert.IsNotNull(merk);
@@ -91,7 +96,7 @@ namespace ecommerce.merk.unittest
         }
 
         [Test]
-        public void Update()
+        public void UpdateTest()
         {
             _repository.Update(merkUpdateStub);
             _repository.SaveChanges();
@@ -115,7 +120,7 @@ namespace ecommerce.merk.unittest
             merk = _repository.GetById(merkStub1.Id);
             Assert.IsNull(merk, "Merk Belum Terhapus");
         }
-
+        
         #endregion 
     }
 }
