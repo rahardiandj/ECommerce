@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\MarketAreaDomain.cs" />
+    <Compile Include="MarketAreaDomainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repositories\IMarketAreaRepository.cs" />
   </ItemGroup>

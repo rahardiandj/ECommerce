@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{19E06DE5-2F8F-4591-9E01-F6D67FB86AA4}</ProjectGuid>
+    <ProjectGuid>{BBFE8621-D7AA-4278-8207-DEF2F853616A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ecommerce.store</RootNamespace>
-    <AssemblyName>ecommerce.store</AssemblyName>
+    <RootNamespace>ecommerce.store.integrationtest</RootNamespace>
+    <AssemblyName>ecommerce.store.integrationtest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NSubstitute">
+      <HintPath>..\..\..\Lib\NSubstitute\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
@@ -41,10 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entities\StoreDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="repositories\IStoreRepository.cs" />
-    <Compile Include="StoreDomainService.cs" />
+    <Compile Include="StoreIntegrationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\ecommerce.core\ecommerce.core.csproj">
@@ -54,6 +56,10 @@
     <ProjectReference Include="..\..\..\DataModel\ecommerce.datamodel\ecommerce.datamodel.csproj">
       <Project>{D71B87F6-A917-4F34-B5E9-D91709251DB0}</Project>
       <Name>ecommerce.datamodel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\ecommerce.store\ecommerce.store.csproj">
+      <Project>{19E06DE5-2F8F-4591-9E01-F6D67FB86AA4}</Project>
+      <Name>ecommerce.store</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

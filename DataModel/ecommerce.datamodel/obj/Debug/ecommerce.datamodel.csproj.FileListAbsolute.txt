@@ -1,9 +1,0 @@
-E:\E_Commerce\DataModel\ecommerce.datamodel\bin\Debug\db_commerce.sdf
-E:\E_Commerce\DataModel\ecommerce.datamodel\bin\Debug\ecommerce.datamodel.dll.config
-E:\E_Commerce\DataModel\ecommerce.datamodel\bin\Debug\ecommerce.datamodel.dll
-E:\E_Commerce\DataModel\ecommerce.datamodel\bin\Debug\ecommerce.datamodel.pdb
-E:\E_Commerce\DataModel\ecommerce.datamodel\bin\Debug\ecommerce.core.dll
-E:\E_Commerce\DataModel\ecommerce.datamodel\bin\Debug\ecommerce.core.pdb
-E:\E_Commerce\DataModel\ecommerce.datamodel\obj\Debug\ecommerce.datamodel.csprojResolveAssemblyReference.cache
-E:\E_Commerce\DataModel\ecommerce.datamodel\obj\Debug\ecommerce.datamodel.dll
-E:\E_Commerce\DataModel\ecommerce.datamodel\obj\Debug\ecommerce.datamodel.pdb

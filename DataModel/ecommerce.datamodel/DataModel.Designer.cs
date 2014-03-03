@@ -84,22 +84,6 @@ namespace ecommerce.datamodel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<MarketArea> MarketAreas
-        {
-            get
-            {
-                if ((_MarketAreas == null))
-                {
-                    _MarketAreas = base.CreateObjectSet<MarketArea>("MarketAreas");
-                }
-                return _MarketAreas;
-            }
-        }
-        private ObjectSet<MarketArea> _MarketAreas;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<Store> Stores
         {
             get
@@ -128,6 +112,22 @@ namespace ecommerce.datamodel
             }
         }
         private ObjectSet<Merk> _Merks;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<MarketArea> MarketAreas
+        {
+            get
+            {
+                if ((_MarketAreas == null))
+                {
+                    _MarketAreas = base.CreateObjectSet<MarketArea>("MarketAreas");
+                }
+                return _MarketAreas;
+            }
+        }
+        private ObjectSet<MarketArea> _MarketAreas;
 
         #endregion
 
@@ -139,14 +139,6 @@ namespace ecommerce.datamodel
         public void AddToHeadOffices(HeadOffice headOffice)
         {
             base.AddObject("HeadOffices", headOffice);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the MarketAreas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToMarketAreas(MarketArea marketArea)
-        {
-            base.AddObject("MarketAreas", marketArea);
         }
     
         /// <summary>
@@ -163,6 +155,14 @@ namespace ecommerce.datamodel
         public void AddToMerks(Merk merk)
         {
             base.AddObject("Merks", merk);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the MarketAreas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMarketAreas(MarketArea marketArea)
+        {
+            base.AddObject("MarketAreas", marketArea);
         }
 
         #endregion
@@ -547,30 +547,6 @@ namespace ecommerce.datamodel
         private global::System.String _Country;
         partial void OnCountryChanging(global::System.String value);
         partial void OnCountryChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Descriotion
-        {
-            get
-            {
-                return _Descriotion;
-            }
-            set
-            {
-                OnDescriotionChanging(value);
-                ReportPropertyChanging("Descriotion");
-                _Descriotion = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Descriotion");
-                OnDescriotionChanged();
-            }
-        }
-        private global::System.String _Descriotion;
-        partial void OnDescriotionChanging(global::System.String value);
-        partial void OnDescriotionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

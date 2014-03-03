@@ -54,6 +54,14 @@ namespace ecommerce.headoffice.repository
             return results;
         }
 
+        HeadOffice IHeadOfficeRepository.GetById(Guid id)
+        {
+            var headOffice = (from e in Entities
+                        where e.Id == id
+                        select e).FirstOrDefault();
+            return headOffice;
+        }
+
         #region Not Implemented
 
         IObjectContextManager IDALRepository<HeadOffice>.ObjectContexManager

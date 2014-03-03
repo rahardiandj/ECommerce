@@ -18,6 +18,7 @@ namespace ecommerce.merk
             _merkRepository = merkRepository;
         }
 
+        #region Public Method
         public MerkServiceResponse Create(MerkDomain merk)
         {
             MerkServiceResponse response = new MerkServiceResponse();
@@ -73,13 +74,20 @@ namespace ecommerce.merk
         {
             MerkServiceResponse response = new MerkServiceResponse();
             Collection<Merk> merks = _merkRepository.GetAll();
-            
-            foreach (var m in merks)
+
+            if (merks.Count == 0)
             {
-                CreateParameter param = new CreateParameter(m.Id,m.Code,m.Name,m.Manufacture);
-                MerkDomain merk = MerkDomain.Create(param);
-                MergeExtension.Merge(merk,m);
-                response.MerkDomains.Add(merk);
+                response.Messages.Add(new Message("Tidak Ada Merk Yang Terdaftar"));
+            }
+            else
+            {
+                foreach (var m in merks)
+                {
+                    CreateParameter param = new CreateParameter(m.Id, m.Code, m.Name, m.Manufacture);
+                    MerkDomain merk = MerkDomain.Create(param);
+                    MergeExtension.Merge(merk, m);
+                    response.MerkDomains.Add(merk);
+                }
             }
             return response;
         }
@@ -89,6 +97,7 @@ namespace ecommerce.merk
             //MerkId id = new MerkId(ownerId, code);
             //brandRepository.Remove(id);
         }
+        #endregion
 
         private bool validateIsNotExist(string id)
         {
@@ -96,7 +105,7 @@ namespace ecommerce.merk
             return merk == null;
         }
     }
-
+        
     #region Messages
     /// <summary>
     /// Merk Service Message 

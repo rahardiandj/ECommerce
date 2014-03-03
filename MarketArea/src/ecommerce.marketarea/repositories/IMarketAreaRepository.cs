@@ -9,6 +9,6 @@ namespace ecommerce.marketarea.repositories
 {
     public interface IMarketAreaRepository : IDALRepository<MarketArea>
     {
-        MarketArea GetByName(string name);
+        MarketArea GetById(Guid id);
     }
 }

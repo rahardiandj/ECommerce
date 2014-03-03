@@ -10,5 +10,6 @@ namespace ecommerce.headoffice.repositories
 {
     public interface IHeadOfficeRepository : IDALRepository<HeadOffice>
     {
+        HeadOffice GetById(Guid id);
     }
 }

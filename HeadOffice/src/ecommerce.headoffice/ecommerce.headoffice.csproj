@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\HeadOfficeDomain.cs" />
+    <Compile Include="HeadOfficeDomainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repositories\IHeadOfficeRepository.cs" />
   </ItemGroup>

@@ -33,7 +33,6 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
           <Property Name="City" Type="nvarchar" MaxLength="100" />
           <Property Name="Country" Type="nvarchar" MaxLength="100" />
-          <Property Name="Descriotion" Type="ntext" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
         </EntityType>
@@ -66,9 +65,9 @@
       <Schema Namespace="db_commerceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="db_commerceEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="HeadOffices" EntityType="db_commerceModel.HeadOffice" />
-          <EntitySet Name="MarketAreas" EntityType="db_commerceModel.MarketArea" />
           <EntitySet Name="Stores" EntityType="db_commerceModel.Store" />
           <EntitySet Name="Merks" EntityType="db_commerceModel.Merk" />
+          <EntitySet Name="MarketAreas" EntityType="db_commerceModel.MarketArea" />
         </EntityContainer>
         <EntityType Name="HeadOffice">
           <Key>
@@ -81,19 +80,6 @@
           <Property Type="String" Name="City" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Country" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="CreateDate" />
-          <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="MarketArea">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Type="Guid" Name="Id" Nullable="false" />
-          <Property Type="String" Name="CodeArea" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="City" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Country" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Descriotion" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="CreatedDate" />
           <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Store">
@@ -119,6 +105,18 @@
           <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="CreateDate" />
         </EntityType>
+        <EntityType Name="MarketArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="CodeArea" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" />
+          <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -135,20 +133,6 @@
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MarketAreas">
-            <EntityTypeMapping TypeName="db_commerceModel.MarketArea">
-              <MappingFragment StoreEntitySet="MarketArea">
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="Descriotion" ColumnName="Descriotion" />
-                <ScalarProperty Name="Country" ColumnName="Country" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CodeArea" ColumnName="CodeArea" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -178,6 +162,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="MarketAreas">
+            <EntityTypeMapping TypeName="db_commerceModel.MarketArea">
+              <MappingFragment StoreEntitySet="MarketArea">
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CodeArea" ColumnName="CodeArea" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -200,9 +197,9 @@
     <Diagrams>
       <Diagram Name="Model1">
         <EntityTypeShape EntityType="db_commerceModel.HeadOffice" Width="1.5" PointX="3.375" PointY="0.75" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="db_commerceModel.MarketArea" Width="1.5" PointX="0.75" PointY="3.75" Height="2.5571907552083335" />
         <EntityTypeShape EntityType="db_commerceModel.Store" Width="1.5" PointX="3.375" PointY="4.75" Height="2.3648893229166656" />
         <EntityTypeShape EntityType="db_commerceModel.Merk" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="db_commerceModel.MarketArea" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" />
       </Diagram>
     </Diagrams>
   </Designer>

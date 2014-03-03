@@ -49,9 +49,13 @@ namespace ecommerce.marketarea.repository
             Entities.DeleteObject(marketArea);
         }
 
-        MarketArea IMarketAreaRepository.GetByName(string name)
+        MarketArea IMarketAreaRepository.GetById(Guid id)
         {
-            throw new NotImplementedException();
+            var marketArea = (from e in Entities
+                              where e.Id == id
+                              select e).FirstOrDefault();
+            return marketArea;
+
         }
 
         Collection<MarketArea> core.IDALRepository<MarketArea>.GetAll()

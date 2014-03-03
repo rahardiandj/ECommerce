@@ -24,7 +24,6 @@ namespace ecommerce.marketarea.unittest
             Country = "Indonesia",
             CreatedBy = "Rahardian",
             CreatedDate = DateTime.Now,
-            Descriotion = "Area jabar",
             Name = "Bandung Market"
         };
 
