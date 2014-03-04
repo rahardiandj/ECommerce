@@ -12,10 +12,10 @@ namespace ecommerce.merk.parameters
 
         public CreateParameter(string ownerId, string code, string name, string manufacture)
         {
-            if (String.IsNullOrWhiteSpace(code))
-                throw new NullOrWhiteSpaceException("Code Brand");
-            else if (String.IsNullOrWhiteSpace(name))
-                throw new NullOrWhiteSpaceException("Brand Name");
+            //if (String.IsNullOrWhiteSpace(code))
+            //    throw new NullOrWhiteSpaceException("Code Brand");
+            //else if (String.IsNullOrWhiteSpace(name))
+            //    throw new NullOrWhiteSpaceException("Brand Name");
 
             this.OwnerId = ownerId;
             this.Code = code;

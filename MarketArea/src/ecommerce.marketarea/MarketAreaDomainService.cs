@@ -29,6 +29,7 @@ namespace ecommerce.marketarea
                 response.Messages.Add(new Message("Data is already on database"));
             else
             {
+                marketAreaEntity = new MarketArea();
                 MergeExtension.Merge(marketAreaEntity, marketArea);
                 _marketAreaRepository.Add(marketAreaEntity);
                 _marketAreaRepository.SaveChanges();
@@ -45,6 +46,7 @@ namespace ecommerce.marketarea
                 response.Messages.Add(new Message("Data is not in Database"));
             else
             {
+                marketAreaEntity = new MarketArea();
                 MergeExtension.Merge(marketAreaEntity, marketArea);
                 _marketAreaRepository.Update(marketAreaEntity);
                 _marketAreaRepository.SaveChanges();

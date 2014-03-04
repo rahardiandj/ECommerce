@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\E_Commerce\Core\ecommerce.core\bin\Debug\ecommerce.core.nunit" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-03-04" time="23:15:03">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files\NUnit 2.6.3\bin" machine-name="RAHARDIANDJ-PC" user="RahardianDJ" user-domain="RahardianDJ-PC" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Project" name="E:\E_Commerce\Core\ecommerce.core\bin\Debug\ecommerce.core.nunit" executed="True" result="Failure" success="False" time="0.263" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="E:\E_Commerce\Core\ecommerce.core\bin\Debug\..\..\..\..\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" executed="True" result="Failure" success="False" time="0.254" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="ecommerce" executed="True" result="Failure" success="False" time="0.253" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="merk" executed="True" result="Failure" success="False" time="0.252" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="unittest" executed="True" result="Failure" success="False" time="0.252" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="MerkUnitTest" executed="True" result="Failure" success="False" time="0.250" asserts="0">
+                        <results>
+                          <test-case name="ecommerce.merk.unittest.MerkUnitTest.InsertTest" executed="True" result="Error" success="False" time="0.126" asserts="0">
+                            <failure>
+                              <message><![CDATA[SetUp : Microsoft.Practices.ServiceLocation.ActivationException : Activation error occured while trying to get instance of type IObjectContextManager, key "ObjectContextManager"
+  ----> Castle.MicroKernel.ComponentActivator.ComponentActivatorException : ComponentActivator: could not instantiate ecommerce.datamodel.ObjectContextManager
+  ----> System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> System.Configuration.ConfigurationErrorsException : Index 2 is out of range.]]></message>
+                              <stack-trace><![CDATA[at Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key) in c:\Home\Chris\Projects\CommonServiceLocator\main\Microsoft.Practices.ServiceLocation\ServiceLocatorImplBase.cs:line 53
+at Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService](String key) in c:\Home\Chris\Projects\CommonServiceLocator\main\Microsoft.Practices.ServiceLocation\ServiceLocatorImplBase.cs:line 103
+at ecommerce.merk.unittest.MerkUnitTest.Initialization() in E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\MerkUnitTest.cs:line 60
+--ComponentActivatorException
+at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, Object[] arguments, Type[] signature) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 146
+at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 92
+at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 70
+at Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\ComponentActivator\AbstractComponentActivator.cs:line 75
+at Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\Lifestyle\AbstractLifestyleManager.cs:line 42
+at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:line 61
+at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context, Boolean instanceRequired) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:line 771
+at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:line 369
+at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\DefaultKernel.cs:line 904
+at Castle.MicroKernel.DefaultKernel.Resolve(String key, Type service) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\DefaultKernel_Resolve.cs:line 52
+at Castle.Windsor.WindsorContainer.Resolve(String key, Type service) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\Windsor\WindsorContainer.cs:line 790
+at Microsoft.Practices.Windsor.ServiceLocatorAdapter.WindsorServiceLocator.DoGetInstance(Type serviceType, String key)
+at Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key) in c:\Home\Chris\Projects\CommonServiceLocator\main\Microsoft.Practices.ServiceLocation\ServiceLocatorImplBase.cs:line 49
+--TargetInvocationException
+at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+at System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, Type[] signature) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 196
+at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, Object[] arguments, Type[] signature) in e:\OSS.Code\Castle.Windsor\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 126
+--ConfigurationErrorsException
+at System.Configuration.ConfigurationElementCollection.BaseGet(Int32 index)
+at System.Configuration.ConnectionStringSettingsCollection.get_Item(Int32 index)
+at ecommerce.datamodel.ObjectContextManager..ctor() in E:\E_Commerce\DataModel\ecommerce.datamodel\ObjectContextManager.cs:line 14
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

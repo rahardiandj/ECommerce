@@ -40,10 +40,7 @@ namespace ecommerce.merk.unittest
             Code = "X",
             Name = "Planet Surf",
             Manufacture = "Billabong",
-        };
-
-           
-            
+        };   
 
         #endregion
 
@@ -102,7 +99,7 @@ namespace ecommerce.merk.unittest
             _repository.SaveChanges();
             merk =_repository.GetById(merkUpdateStub.Id);
             
-            Assert.AreEqual(merkUpdateStub, merk);
+            Assert.AreEqual(merkUpdateStub.Id, merk.Id);
         }
 
         [Test]

@@ -29,6 +29,7 @@ namespace ecommerce.headoffice
                 response.Messages.Add(new Message("Data is already on database"));
             else
             {
+                headOfficeEntity = new HeadOffice();
                 MergeExtension.Merge(headOfficeEntity, headOffice);
                 _headOfficeRepository.Add(headOfficeEntity);
                 _headOfficeRepository.SaveChanges();
@@ -45,6 +46,7 @@ namespace ecommerce.headoffice
                 response.Messages.Add(new Message("Data is not in Database"));
             else
             {
+                headOfficeEntity = new HeadOffice();
                 MergeExtension.Merge(headOfficeEntity, headOffice);
                 _headOfficeRepository.Update(headOfficeEntity);
                 _headOfficeRepository.SaveChanges();
