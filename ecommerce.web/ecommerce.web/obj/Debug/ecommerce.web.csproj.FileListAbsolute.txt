@@ -1,5 +1,0 @@
-E:\E_Commerce\ecommerce.web\ecommerce.web\bin\ecommerce.web.dll
-E:\E_Commerce\ecommerce.web\ecommerce.web\bin\ecommerce.web.pdb
-E:\E_Commerce\ecommerce.web\ecommerce.web\obj\Debug\ecommerce.web.dll
-E:\E_Commerce\ecommerce.web\ecommerce.web\obj\Debug\ecommerce.web.pdb
-E:\E_Commerce\ecommerce.web\ecommerce.web\obj\Debug\ecommerce.web.csprojResolveAssemblyReference.cache
