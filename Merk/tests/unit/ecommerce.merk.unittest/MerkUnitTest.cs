@@ -40,7 +40,15 @@ namespace ecommerce.merk.unittest
             Code = "X",
             Name = "Planet Surf",
             Manufacture = "Billabong",
-        };   
+        };
+
+        private Merk merkUpdateNullStub = new Merk()
+        {
+            Id = "A",
+            Code = "A",
+            Name = "Planet Surf",
+            Manufacture = "Billabong",
+        };  
 
         #endregion
 
@@ -83,6 +91,13 @@ namespace ecommerce.merk.unittest
         {
             merk = _repository.GetById("X"); 
             Assert.IsNotNull(merk);
+        }
+
+        [Test]
+        [ExpectedException(typeof(System.InvalidOperationException))]
+        public void UpdateNullMerkTest()
+        {
+            _repository.Update(merkUpdateNullStub);
         }
 
         [Test]
