@@ -11,13 +11,12 @@ using ecommerce.datamodel;
 using NSubstitute;
 using ecommerce.merk.aggregate;
 using System.Collections.ObjectModel;
+using ecommerce.merk.parameters;
 
 namespace ecommerce.merk.integrationtest
 {
     public class MerkIntegrationTest
     {
-        //private DynamicMock merkRepositoryMock;
-
         #region Dummy Data
         MerkDomainService service;
         
@@ -35,10 +34,19 @@ namespace ecommerce.merk.integrationtest
             Name = "Planet Surf",
         };
 
+        static CreateParameter paramNull = new CreateParameter("", "", "", "");
+        static CreateParameter param = new CreateParameter("005", "AW", "Airwalk", "PT Airwalk");
+        static CreateParameter paramExist = new CreateParameter("001", "AW", "Airwalk", "PT Airwalk");
+        private MerkDomain merkDomainNull = MerkDomain.Create(paramNull);
+        private MerkDomain merkDomain = MerkDomain.Create(param);
+        private MerkDomain merkDomainExist = MerkDomain.Create(paramExist);
+
         private Collection<Merk> merks = new Collection<Merk>();
 
         #endregion
-        
+
+        #region Test Initialization
+
         [SetUp]
         public void Initialization()
         {
@@ -51,10 +59,26 @@ namespace ecommerce.merk.integrationtest
             repository.GetAll().Returns(merks);
         }
 
+        #endregion
+
+        #region Test Method
+
         [Test]
         public void Insert()
         {
+            Assert.IsEmpty(service.Create(merkDomain).Messages);
+        }
 
+        [Test]
+        public void Update()
+        {
+            Assert.IsEmpty(service.Update(merkDomainExist).Messages);
+        }
+
+        [Test]
+        public void UpdateMerkMandatoryFieldsNullTest()
+        {
+            Assert.AreEqual(service.Update(merkDomainNull).Messages.FirstOrDefault().Value, "Mandatory fields is empty");
         }
 
         [Test]
@@ -85,5 +109,14 @@ namespace ecommerce.merk.integrationtest
             string message = _service.GetAllMerk().Messages.FirstOrDefault().Value;
             Assert.AreEqual(message, "Tidak Ada Merk Yang Terdaftar");
         }
+        [Test]
+        public void InsertMerkMandatoryFieldNullTest()
+        {
+            string message = service.Create(merkDomainNull).Messages.FirstOrDefault().Value;
+
+            Assert.AreEqual(message, "Mandatory fields is empty");
+        }
+
+        #endregion
     }
 }

@@ -29,6 +29,7 @@ namespace ecommerce.store
                 response.Messages.Add(new Message("Data is already on database"));
             else
             {
+                storeEntity = new Store();
                 MergeExtension.Merge(storeEntity, store);
                 _storeRepository.Add(storeEntity);
                 _storeRepository.SaveChanges();
@@ -45,6 +46,7 @@ namespace ecommerce.store
                 response.Messages.Add(new Message("Data is not in Database"));
             else
             {
+                storeEntity = new Store();
                 MergeExtension.Merge(storeEntity, store);
                 _storeRepository.Update(storeEntity);
                 _storeRepository.SaveChanges();
@@ -63,7 +65,7 @@ namespace ecommerce.store
             }
             else
             {
-
+                
                 StoreDomain storeDomain = new StoreDomain();
                 MergeExtension.Merge(storeDomain, store);
                 response.StoreDomain = storeDomain;

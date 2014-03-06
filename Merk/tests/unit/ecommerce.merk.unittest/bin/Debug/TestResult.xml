@@ -1,42 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-02-21" time="14:42:40">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files\NUnit 2.6.3\bin" machine-name="RAHARDIANDJ-PC" user="RahardianDJ" user-domain="RahardianDJ-PC" />
+<test-results name="E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" total="7" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-03-05" time="11:48:31">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug" machine-name="RAHARDIANDJ-PC" user="RahardianDJ" user-domain="RahardianDJ-PC" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" executed="True" result="Failure" success="False" time="16.344" asserts="0">
+  <test-suite type="Assembly" name="E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" executed="True" result="Success" success="True" time="4.882" asserts="0">
     <results>
-      <test-suite type="Namespace" name="ecommerce" executed="True" result="Failure" success="False" time="16.335" asserts="0">
+      <test-suite type="Namespace" name="ecommerce" executed="True" result="Success" success="True" time="4.872" asserts="0">
         <results>
-          <test-suite type="Namespace" name="merk" executed="True" result="Failure" success="False" time="16.334" asserts="0">
+          <test-suite type="Namespace" name="merk" executed="True" result="Success" success="True" time="4.871" asserts="0">
             <results>
-              <test-suite type="Namespace" name="unittest" executed="True" result="Failure" success="False" time="16.334" asserts="0">
+              <test-suite type="Namespace" name="unittest" executed="True" result="Success" success="True" time="4.870" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="MerkUnitTest" executed="True" result="Failure" success="False" time="16.332" asserts="0">
+                  <test-suite type="TestFixture" name="MerkUnitTest" executed="True" result="Success" success="True" time="4.869" asserts="0">
                     <results>
-                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.InsertTest" executed="True" result="Error" success="False" time="16.320" asserts="0">
-                        <failure>
-                          <message><![CDATA[System.Data.SqlClient.SqlException : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)]]></message>
-                          <stack-trace><![CDATA[at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
-at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
-at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
-at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
-at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
-at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
-at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
-at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
-at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
-at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
-at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
-at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
-at System.Data.SqlClient.SqlConnection.Open()
-at ecommerce.merk.unittest.MerkUnitTest.InsertTest() in E:\E_Commerce\Merk\tests\unit\ecommerce.merk.unittest\MerkUnitTest.cs:line 33
-]]></stack-trace>
-                        </failure>
-                      </test-case>
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.DeleteMerk" executed="True" result="Success" success="True" time="4.034" asserts="1" />
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.GetAllMerkTest" executed="True" result="Success" success="True" time="0.043" asserts="1" />
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.GetByIdMerkTest" executed="True" result="Success" success="True" time="0.012" asserts="1" />
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.GetByIdNullMerkTest" executed="True" result="Success" success="True" time="0.015" asserts="1" />
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.InsertTest" executed="True" result="Success" success="True" time="0.224" asserts="1" />
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.UpdateNullMerkTest" executed="True" result="Success" success="True" time="0.024" asserts="0" />
+                      <test-case name="ecommerce.merk.unittest.MerkUnitTest.UpdateTest" executed="True" result="Success" success="True" time="0.142" asserts="1" />
                     </results>
                   </test-suite>
                 </results>

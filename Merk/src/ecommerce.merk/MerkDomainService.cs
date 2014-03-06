@@ -22,12 +22,19 @@ namespace ecommerce.merk
         public MerkServiceResponse Create(MerkDomain merk)
         {
             MerkServiceResponse response = new MerkServiceResponse();
-           
-            
-            if (!validateIsNotExist(merk.Id.OwnerId))
+
+
+            if (validateMandatoryField(merk))
+            {
+                response.Messages.Add(new Message("Mandatory fields is empty"));
+            }
+            else if (!validateIsNotExist(merk.Id.OwnerId))
+            {
                 response.Messages.Add(new Message("Data is already on database"));
+            }
             else
             {
+                merkEntity = new Merk();
                 MergeExtension.Merge(merkEntity, merk);
                 _merkRepository.Add(merkEntity);
                 _merkRepository.SaveChanges();
@@ -40,12 +47,16 @@ namespace ecommerce.merk
         {
             MerkServiceResponse response = new MerkServiceResponse();
 
-            if (!validateIsNotExist(merk.Id.OwnerId))
+            if (validateMandatoryField(merk))
+            {
+                response.Messages.Add(new Message("Mandatory fields is empty"));
+            }
+            else if (validateIsNotExist(merk.Id.OwnerId))
                 response.Messages.Add(new Message("Data is not in Database"));
             else
             {
+                merkEntity = new Merk();
                 MergeExtension.Merge(merkEntity, merk);
-
                 _merkRepository.Update(merkEntity);
                 _merkRepository.SaveChanges();
             }
@@ -103,6 +114,11 @@ namespace ecommerce.merk
         {
             Merk merk = _merkRepository.GetById(id);
             return merk == null;
+        }
+
+        private bool validateMandatoryField(MerkDomain merk)
+        {
+            return (merk.Id == null) || (string.IsNullOrWhiteSpace(merk.Name));
         }
     }
         

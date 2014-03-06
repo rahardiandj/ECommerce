@@ -54,8 +54,10 @@ namespace ecommerce.merk.repository
                         select e).FirstOrDefault();
             if (merk == null)
                 throw (new InvalidOperationException("Entity doesn't exist in database."));
-
-            Entities.ApplyCurrentValues(entity);
+            else
+            {
+                Entities.ApplyCurrentValues(entity);
+            }
         }
 
         /// <summary>
@@ -78,17 +80,10 @@ namespace ecommerce.merk.repository
         /// <returns></returns>
         public Merk GetById(string id)
         {
-            try
-            {
-                var merk = (from e in Entities
-                            where e.Id == id
-                            select e).FirstOrDefault();
-                return merk;
-            }
-            catch
-            {
-                return null;
-            }
+            var merk = (from e in Entities
+                        where e.Id == id
+                        select e).FirstOrDefault();
+            return merk;
         }
 
         #region Not Implemented

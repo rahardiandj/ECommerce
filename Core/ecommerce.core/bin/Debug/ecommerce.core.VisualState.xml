@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]E:\E_Commerce\Core\ecommerce.core\bin\Debug\ecommerce.core.nunit</TopNode>
+  <SelectedNode>[0-1021]E:\E_Commerce\Core\ecommerce.core\bin\Debug\..\..\..\..\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]E:\E_Commerce\Core\ecommerce.core\bin\Debug\ecommerce.core.nunit" Expanded="true" />
+    <Node UniqueName="[0-1011]E:\E_Commerce\Core\ecommerce.core\bin\Debug\..\..\..\..\Merk\tests\integrations\ecommerce.merk.integrationtest\bin\Debug\ecommerce.merk.integrationtest.dll" Expanded="true" />
+    <Node UniqueName="[0-1012]ecommerce" Expanded="true" />
+    <Node UniqueName="[0-1013]ecommerce.merk" Expanded="true" />
+    <Node UniqueName="[0-1014]ecommerce.merk.integrationtest" Expanded="true" />
+    <Node UniqueName="[0-1002]ecommerce.merk.integrationtest.MerkIntegrationTest" Expanded="true" />
+    <Node UniqueName="[0-1021]E:\E_Commerce\Core\ecommerce.core\bin\Debug\..\..\..\..\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" Expanded="true" />
+    <Node UniqueName="[0-1023]ecommerce.merk" Expanded="true" />
+    <Node UniqueName="[0-1024]ecommerce.merk.unittest" Expanded="true" />
+    <Node UniqueName="[0-1015]ecommerce.merk.unittest.MerkUnitTest" Expanded="true" />
+  </Nodes>
+</VisualState>

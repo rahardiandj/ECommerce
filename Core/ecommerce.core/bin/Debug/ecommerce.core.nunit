@@ -1,0 +1,8 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Default" />
+  <Config name="Default" binpathtype="Auto">
+    <assembly path="ecommerce.core.dll" />
+    <assembly path="..\..\..\..\Merk\tests\integrations\ecommerce.merk.integrationtest\bin\Debug\ecommerce.merk.integrationtest.dll" />
+    <assembly path="..\..\..\..\Merk\tests\unit\ecommerce.merk.unittest\bin\Debug\ecommerce.merk.unittest.dll" />
+  </Config>
+</NUnitProject>
