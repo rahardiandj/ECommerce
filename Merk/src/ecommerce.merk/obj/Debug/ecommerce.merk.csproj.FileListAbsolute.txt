@@ -2,3 +2,13 @@ E:\E_Commerce\Merk\src\binacitra.headoffice.brand\obj\Debug\binacitra.headoffice
 E:\E_Commerce\Merk\src\binacitra.headoffice.brand\obj\Debug\binacitra.headoffice.brand.pdb
 E:\E_Commerce\Merk\src\binacitra.headoffice.brand\bin\Debug\binacitra.headoffice.brand.dll
 E:\E_Commerce\Merk\src\binacitra.headoffice.brand\bin\Debug\binacitra.headoffice.brand.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\db_commerce.sdf
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\ecommerce.merk.brand.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\ecommerce.merk.brand.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\ecommerce.core.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\ecommerce.datamodel.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\ecommerce.core.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\bin\Debug\ecommerce.datamodel.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\obj\Debug\ecommerce.merk.csprojResolveAssemblyReference.cache
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\obj\Debug\ecommerce.merk.brand.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Merk\src\ecommerce.merk\obj\Debug\ecommerce.merk.brand.pdb
