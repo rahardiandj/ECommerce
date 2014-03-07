@@ -10,3 +10,15 @@ E:\E_Commerce\Store\ecommerce.store.repository\bin\Debug\ecommerce.datamodel.pdb
 E:\E_Commerce\Store\ecommerce.store.repository\bin\Debug\ecommerce.store.pdb
 E:\E_Commerce\Store\ecommerce.store.repository\obj\Debug\ecommerce.store.repository.dll
 E:\E_Commerce\Store\ecommerce.store.repository\obj\Debug\ecommerce.store.repository.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\db_commerce.sdf
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.store.repository.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.store.repository.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.core.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.datamodel.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.store.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.core.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.datamodel.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\bin\Debug\ecommerce.store.pdb
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\obj\Debug\ecommerce.store.repository.csprojResolveAssemblyReference.cache
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\obj\Debug\ecommerce.store.repository.dll
+D:\[BISMILLAH]\S2\[Semester 2]\Software Quality\ECommerce\Store\src\ecommerce.store.repository\obj\Debug\ecommerce.store.repository.pdb
