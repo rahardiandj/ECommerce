@@ -11,7 +11,7 @@ using ecommerce.marketarea.entities;
 
 namespace ecommerce.marketarea.integrationtest
 {
-    public class MarketAreaIntegrationTest
+    public class MarketAreaServiceUnitTest
     {
         #region Dummy Data
         private MarketArea marketArea1 = new MarketArea()
@@ -38,6 +38,7 @@ namespace ecommerce.marketarea.integrationtest
         [SetUp]
         public void Initialization()
         {
+            //Mock up object
             var repository = Substitute.For<IMarketAreaRepository>();
             service = new MarketAreaDomainService(repository);
             repository.GetById(id1).Returns(marketArea1);

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2E721815-BC27-4A52-902A-3DD32F77E20D}</ProjectGuid>
+    <ProjectGuid>{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ecommerce.merk.integrationtest</RootNamespace>
-    <AssemblyName>ecommerce.merk.integrationtest</AssemblyName>
+    <RootNamespace>ecommerce.core.unittest</RootNamespace>
+    <AssemblyName>ecommerce.core.unittest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,28 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\..\..\..\Lib\Castle.Windsor.2.5.2\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\..\..\..\Lib\Castle.Windsor.2.5.2\Castle.Windsor.dll</HintPath>
-    </Reference>
-    <Reference Include="MF.Core.DependencyInjection">
-      <HintPath>..\..\..\..\Lib\MF.Core.DependencyInjection.dll</HintPath>
-    </Reference>
-    <Reference Include="MF.Core.Service.DependencyInjection">
-      <HintPath>..\..\..\..\Lib\MF.Core.Service.DependencyInjection.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\..\..\Lib\CommonServiceLocator\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
-    <Reference Include="NSubstitute">
-      <HintPath>..\..\..\..\Lib\NSubstitute\NSubstitute.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,23 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MerkIntegrationTest.cs" />
-    <Compile Include="MerkMockTest.cs" />
+    <Compile Include="MergeUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryBaseTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Core\ecommerce.core\ecommerce.core.csproj">
+    <ProjectReference Include="..\ecommerce.core\ecommerce.core.csproj">
       <Project>{E19DF896-7CBC-42A3-991C-AF995EDE2D9F}</Project>
       <Name>ecommerce.core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\DataModel\ecommerce.datamodel\ecommerce.datamodel.csproj">
-      <Project>{D71B87F6-A917-4F34-B5E9-D91709251DB0}</Project>
-      <Name>ecommerce.datamodel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\src\ecommerce.merk\ecommerce.merk.csproj">
-      <Project>{B89D85E1-53A9-4F96-8009-5F649A3DB991}</Project>
-      <Name>ecommerce.merk</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

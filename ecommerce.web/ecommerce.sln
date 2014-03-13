@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.store.integration
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.headoffice.integrationtest", "..\HeadOffice\test\ecommerce.headoffice.integrationtest\ecommerce.headoffice.integrationtest.csproj", "{FE893FFC-92F5-454C-AA4F-BCFD6AB95E8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.core.unittest", "..\Core\ecommerce.core.unittest\ecommerce.core.unittest.csproj", "{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +257,16 @@ Global
 		{FE893FFC-92F5-454C-AA4F-BCFD6AB95E8D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FE893FFC-92F5-454C-AA4F-BCFD6AB95E8D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FE893FFC-92F5-454C-AA4F-BCFD6AB95E8D}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -273,6 +285,7 @@ Global
 		{0491E578-E689-4D11-804D-3420561F4492} = {974083C5-A6F8-407F-B508-F3D60E6F5D57}
 		{2E721815-BC27-4A52-902A-3DD32F77E20D} = {974083C5-A6F8-407F-B508-F3D60E6F5D57}
 		{E19DF896-7CBC-42A3-991C-AF995EDE2D9F} = {E600A81F-C99E-4F91-8543-EAE8DC8B637F}
+		{7A1FF8A3-BF12-4215-A896-4F7FB12E884B} = {E600A81F-C99E-4F91-8543-EAE8DC8B637F}
 		{D71B87F6-A917-4F34-B5E9-D91709251DB0} = {C0BE13C5-B92E-4F1D-A9B8-6405573E3083}
 		{A9E5808C-C190-4D04-B894-3C1CE7F354F7} = {4526A247-DD21-459D-BD23-256C9DA116E6}
 		{6FC64660-5273-477F-8B8D-D83293222956} = {4526A247-DD21-459D-BD23-256C9DA116E6}

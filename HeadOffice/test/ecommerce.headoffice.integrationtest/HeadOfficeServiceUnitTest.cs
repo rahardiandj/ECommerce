@@ -10,7 +10,7 @@ using NSubstitute;
 
 namespace ecommerce.headoffice.integrationtest
 {
-    public class HeadOfficeIntegrationTest
+    public class HeadOfficeServiceUnitTest
     {
         #region Dummy Data
 
@@ -40,6 +40,7 @@ namespace ecommerce.headoffice.integrationtest
         [SetUp]
         public void Initialization()
         {
+            //Mock up object
             var repository = Substitute.For<IHeadOfficeRepository>();
             service = new HeadOfficeDomainService(repository);
             repository.GetById(id1).Returns(headOffice1);

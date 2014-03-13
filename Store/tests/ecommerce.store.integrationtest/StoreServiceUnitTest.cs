@@ -10,7 +10,7 @@ using System.Collections.ObjectModel;
 
 namespace ecommerce.store.integrationtest
 {
-    public class StoreIntegrationTest
+    public class StoreServiceUnitTest
     {
         #region Dummy Data
 
@@ -38,6 +38,7 @@ namespace ecommerce.store.integrationtest
         [SetUp]
         public void Initialization()
         {
+            //Mock up object
             var repository = Substitute.For<IStoreRepository>();
             service = new StoreDomainService(repository);
             repository.GetById(id1).Returns(store1);
