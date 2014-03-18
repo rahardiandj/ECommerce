@@ -30,7 +30,9 @@ namespace ecommerce.merk
             }
             else if (!validateIsNotExist(merk.Id.OwnerId))
             {
+                #region TO DO Create Unit Test
                 response.Messages.Add(new Message("Data is already on database"));
+                #endregion
             }
             else
             {
@@ -51,8 +53,10 @@ namespace ecommerce.merk
             {
                 response.Messages.Add(new Message("Mandatory fields is empty"));
             }
+            #region TO DO Create Unit Test
             else if (validateIsNotExist(merk.Id.OwnerId))
                 response.Messages.Add(new Message("Data is not in Database"));
+            #endregion
             else
             {
                 merkEntity = new Merk();
@@ -74,9 +78,11 @@ namespace ecommerce.merk
             }
             else
             {
+                #region TO DO Create Unit Test
                 Merk merk = _merkRepository.GetById(id);
                 CreateParameter param = new CreateParameter(merk.Id, merk.Code, merk.Name,merk.Manufacture);
                 response.MerkDomain = MerkDomain.Create(param);
+                #endregion
             }
             return response;
         }

@@ -14,11 +14,6 @@ namespace ecommerce.merk.aggregate
             return new MerkDomain(param);
         }
 
-        public void ChangeName(string name)
-        {
-            this.Name = name;
-        }
-
         private MerkDomain(CreateParameter param)
         {
             this.Id = new MerkId(param.OwnerId, param.Code);
