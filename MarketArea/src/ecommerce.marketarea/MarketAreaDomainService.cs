@@ -73,14 +73,14 @@ namespace ecommerce.marketarea
             return response;
         }
 
-        public MarketAreaServiceResponse GetAllMerk()
+        public MarketAreaServiceResponse GetAllMarketArea()
         {
             MarketAreaServiceResponse response = new MarketAreaServiceResponse();
             Collection<MarketArea> marketAreas = _marketAreaRepository.GetAll();
 
             if (marketAreas.Count == 0)
             {
-                response.Messages.Add(new Message("Tidak Ada Merk Yang Terdaftar"));
+                response.Messages.Add(new Message("Tidak Ada Market Area Yang Terdaftar"));
             }
             else
             {
