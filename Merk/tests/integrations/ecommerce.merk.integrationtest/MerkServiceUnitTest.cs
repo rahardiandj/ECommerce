@@ -110,6 +110,7 @@ namespace ecommerce.merk.integrationtest
             string message = _service.GetAllMerk().Messages.FirstOrDefault().Value;
             Assert.AreEqual(message, "Tidak Ada Merk Yang Terdaftar");
         }
+
         [Test]
         public void InsertMerkMandatoryFieldNullTest()
         {
@@ -117,6 +118,9 @@ namespace ecommerce.merk.integrationtest
 
             Assert.AreEqual(message, "Mandatory fields is empty");
         }
+
+        [Test]
+        public void 
 
         #endregion
     }

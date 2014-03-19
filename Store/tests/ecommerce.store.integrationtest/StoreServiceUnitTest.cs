@@ -7,6 +7,7 @@ using NUnit.Framework;
 using NSubstitute;
 using ecommerce.store.repositories;
 using System.Collections.ObjectModel;
+using ecommerce.store.entities;
 
 namespace ecommerce.store.integrationtest
 {
@@ -14,9 +15,9 @@ namespace ecommerce.store.integrationtest
     {
         #region Dummy Data
 
-        StoreDomainService service;
+        StoreDomain s = null;
 
-        private Store store = new Store()
+        private Store store1 = new Store()
         {
             Code = "SS",
             CreateBy = "BlackMail",
@@ -27,37 +28,83 @@ namespace ecommerce.store.integrationtest
             Type = "Toko",
         };
 
-        private Store storeGet = new Store()
+        private Store store2 = new Store()
         {
             Code = "AF",
             CreateBy = "WhiteNoise",
             CreatedDate = DateTime.Now,
             Id = new Guid("e41118af-a430-407e-a472-4db2750086b9"),
-            Location = "Trans Studio Mall",
-            Name = "Athlete Foot",
-            Type = "Counter",
+            Location = "Trans Studio Bandung",
+            Name = "Athlete's Foot",
+            Type = "Outlet",
+        };
+
+        private Store storeInsert = new Store()
+        {
+            Code = "JF",
+            Id = new Guid("fd29a909-5019-4769-a1b5-9462f2bb6706"),
+            Location = "Trans Studio Bandung",
+            Name = "Jeffry Store",
+            Type = "Toko",
+        };
+
+        private StoreDomain storeDomainNull = new StoreDomain()
+        {
+            Code = "",
+            Id = new Guid("54bb1e9e-804c-4b1d-9799-1d18e705c976"),
+            Location = "",
+            Name = "",
+            Type = "",
+        };
+
+        private StoreDomain storeDomain = new StoreDomain()
+        {
+            Code = "RK",
+            Id = new Guid("fd29a909-5019-4769-a1b5-9462f2bb6706"),
+            Location = "Balubur Town Square",
+            Name = "Ridwan Kamil",
+            Type = "Toko",
+        };
+
+        private StoreDomain storeDomainInsert = new StoreDomain()
+        {
+            Code = "NN",
+            Id = new Guid("90fc798e-37c5-4d1b-8563-af084b227eca"),
+            Location = "Paris Van Java",
+            Name = "Nastain Heritage",
+            Type = "Outlet Resmi",
+        };
+
+        private StoreDomain storeDomainExist = new StoreDomain()
+        {
+            Code = "DJ",
+            Id = new Guid("fd29a909-5019-4769-a1b5-9462f2bb6706"),
+            Location = "Bandung Indah Plaza",
+            Name = "Dwi Juliarhouse",
+            Type = "i-Store",
         };
 
         private Collection<Store> stores = new Collection<Store>();
 
-        private Guid id1 = new Guid("4CC4B154-0F16-49E0-AB9B-8D17354C4A13");
+        private Guid id1 = new Guid("fd29a909-5019-4769-a1b5-9462f2bb6706");
 
         #endregion
 
         #region Test Initilization
+
+        private StoreDomainService service;
         
-        [SetUp]
         [SetUp]
         public void Initialization()
         {
             //Mock up object
-            var repository = Substitute.For<IMerkRepository>();
-            service = new MerkDomainService(repository);
-            merks.Add(merk);
-            merks.Add(merkGet);
-            repository.GetById("001").Returns(merk);
-            repository.GetById("002").Returns(new Merk());
-            repository.GetAll().Returns(merks);
+            var repository = Substitute.For<IStoreRepository>();
+            s = new StoreDomain();
+            service = new StoreDomainService(repository);
+            repository.GetById(id1).Returns(store1);
+            stores.Add(store1);
+            stores.Add(storeInsert);
+            repository.GetAll().Returns(stores);
         }
 
         #endregion
@@ -65,57 +112,64 @@ namespace ecommerce.store.integrationtest
         #region Test Method
 
         [Test]
-        public void Insert()
+        public void GetByIdStoreServiceTest()
         {
-            Assert.IsEmpty(service.Create(merkDomain).Messages);
+            Assert.NotNull(service.GetStoreById(id1));
         }
 
-        [Test]
-        public void Update()
+        public void GetStoreIfNotExistTest()
         {
-            Assert.IsEmpty(service.Update(merkDomainExist).Messages);
-        }
-
-        [Test]
-        public void UpdateMerkMandatoryFieldsNullTest()
-        {
-            Assert.AreEqual(service.Update(merkDomainNull).Messages.FirstOrDefault().Value, "Mandatory fields is empty");
-        }
-
-        [Test]
-        public void GetMerkById()
-        {
-            Assert.IsNotNull(service.GetMerkById("001"));
-        }
-        [Test]
-        public void GetMerkIfNotExist()
-        {
-            string message = service.GetMerkById("002").Messages.FirstOrDefault().ToString();
+            string message = service.GetStoreById(store2.Id).Messages.FirstOrDefault().ToString();
             Assert.AreEqual(message, "Data is not in Database");
         }
 
         [Test]
-        public void GetAllMerkTest()
+        public void InsertTest()
         {
-            Collection<MerkDomain> merks = service.GetAllMerk().MerkDomains;
-            Assert.IsNotNull(merks);
+            Assert.IsNotEmpty(service.Create(storeDomain).Messages);
         }
 
         [Test]
-        public void GetAllMerkNullTest()
+        public void InsertNotNullTest()
         {
-            var _repository = Substitute.For<IMerkRepository>();
-            _repository.GetAll().Returns(new Collection<Merk>());
-            MerkDomainService _service = new MerkDomainService(_repository);
-            string message = _service.GetAllMerk().Messages.FirstOrDefault().Value;
-            Assert.AreEqual(message, "Tidak Ada Merk Yang Terdaftar");
+            Assert.IsEmpty(service.Create(storeDomainInsert).Messages);
         }
-        [Test]
-        public void InsertMerkMandatoryFieldNullTest()
-        {
-            string message = service.Create(merkDomainNull).Messages.FirstOrDefault().Value;
 
-            Assert.AreEqual(message, "Mandatory fields is empty");
+        [Test]
+        public void UpdateTest()
+        {
+            Assert.IsEmpty(service.Update(storeDomainExist).Messages);
         }
+
+        [Test]
+        public void UpdateNotExistTest()
+        {
+            Assert.AreEqual(service.Update(storeDomainInsert).Messages.FirstOrDefault().Value, "Data is not in Database");
+        }
+
+        [Test]
+        public void GetAllStoreTest()
+        {
+            Collection<StoreDomain> headOffices = service.GetAllStore().StoreDomains;
+            Assert.IsNotNull(stores);
+        }
+
+        [Test]
+        public void GetAllStoreNullTest()
+        {
+            var _repository = Substitute.For<IStoreRepository>();
+            _repository.GetAll().Returns(new Collection<Store>());
+            StoreDomainService _service = new StoreDomainService(_repository);
+            string message = _service.GetAllStore().Messages.FirstOrDefault().Value;
+            Assert.AreEqual(message, "Tidak Ada Store Yang Terdaftar");
+        }
+
+        [Test]
+        public void getValidateIsNotExistTest()
+        {
+            Assert.IsNotNull(service.GetStoreById(store1.Id));
+        }
+
+        #endregion
     }
 }

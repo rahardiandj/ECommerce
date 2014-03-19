@@ -29,7 +29,7 @@ namespace ecommerce.marketarea.unittest
 
         private MarketArea marketAreaStub1 = new MarketArea()
         {
-            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc1e"),
+            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc33"),
             City = "Bandung",
             CodeArea = "BDO",
             Country = "Indonesia",
@@ -46,7 +46,7 @@ namespace ecommerce.marketarea.unittest
 
         private MarketArea marketAreaUpdateStub = new MarketArea()
         {
-            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc1b"),
+            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc24"),
             City = "Bandung",
             CodeArea = "BDO",
             Country = "Indonesia",
@@ -54,6 +54,18 @@ namespace ecommerce.marketarea.unittest
             CreatedDate = DateTime.Now,
             Name = "X"
         };
+
+        private MarketArea marketAreaUpdateStub1 = new MarketArea()
+        {
+            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc24"),
+            City = "Jakarta",
+            CodeArea = "BDO",
+            Country = "Indonesia",
+            CreatedBy = "Ekasari",
+            CreatedDate = DateTime.Now,
+            Name = "X"
+        };
+
         private Collection<MarketArea> areaList = null;
 
         [SetUp]
@@ -83,18 +95,37 @@ namespace ecommerce.marketarea.unittest
         }
 
         [Test]
-        public void UpdateMarketAreaTest()
+        [ExpectedException(typeof(System.InvalidOperationException))]
+        public void UpdateNullmarketAreaTest()
         {
             _repository.Update(marketAreaUpdateStub);
             _repository.SaveChanges();
-            area = _repository.GetById(marketAreaUpdateStub.Id);
+        }
 
-            Assert.AreEqual(marketAreaUpdateStub, area);
+        [Test]
+        public void UpdateMarketAreaTest()
+        {
+
+            //Add first
+            _repository.Add(marketAreaUpdateStub);
+            _repository.SaveChanges();
+
+            _repository.Update(marketAreaUpdateStub1);
+            _repository.SaveChanges();
+
+            area = _repository.GetById(marketAreaUpdateStub1.Id);
+
+            Assert.AreEqual(marketAreaUpdateStub1.City, area.City);
+
+            //Delete so this method can be used again
+            _repository.Delete(marketAreaUpdateStub1);
+            _repository.SaveChanges();
         }
 
         [Test]
         public void DeleteMarketAreaTest()
-        {   //Add first to make data dummy
+        {   
+            //Add first to make data dummy
             _repository.Add(marketAreaStub);
             _repository.SaveChanges();
 
@@ -110,15 +141,33 @@ namespace ecommerce.marketarea.unittest
         [Test]
         public void GetByNameMarketAreaTest()
         {
+            //Add first to make data dummy
+            _repository.Add(marketAreaStub1);
+            _repository.SaveChanges();
+
+            //test case
             area = _repository.GetById(marketAreaStub1.Id);
             Assert.IsNotNull(area);
+
+            //Delete
+            _repository.Delete(marketAreaStub1);
+            _repository.SaveChanges();
         }
 
         [Test]
         public void GetAllMarketAreaTest()
         {
+            //Add first to make data dummy
+            _repository.Add(marketAreaStub1);
+            _repository.SaveChanges();
+
+            //test case
             areaList = _repository.GetAll();
             Assert.IsNotNull(areaList, "Market Area Tidak Kosong");
+
+            //Delete
+            _repository.Delete(marketAreaStub1);
+            _repository.SaveChanges();
         }
     }
 }

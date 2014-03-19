@@ -42,7 +42,7 @@ namespace ecommerce.headoffice
         {
             HeadOfficeServiceResponse response = new HeadOfficeServiceResponse();
 
-            if (!validateIsNotExist(headOffice.Id))
+            if (validateIsNotExist(headOffice.Id))
                 response.Messages.Add(new Message("Data is not in Database"));
             else
             {

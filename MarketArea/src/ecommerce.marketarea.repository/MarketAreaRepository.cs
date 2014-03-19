@@ -81,10 +81,10 @@ namespace ecommerce.marketarea.repository
 
         
 
-        System.Collections.ObjectModel.Collection<MarketArea> core.IDALRepository<MarketArea>.GetByCriteria(string criteria)
-        {
-            throw new NotImplementedException();
-        }
+        //System.Collections.ObjectModel.Collection<MarketArea> core.IDALRepository<MarketArea>.GetByCriteria(string criteria)
+        //{
+        //    throw new NotImplementedException();
+        //}
         #endregion
 
     }

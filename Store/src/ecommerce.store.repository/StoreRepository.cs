@@ -49,28 +49,17 @@ namespace ecommerce.store.repository
 
         Store IStoreRepository.GetById(Guid id)
         {
-            try
-            {
                 var merk = (from e in Entities
                             where e.Id == id
                             select e).FirstOrDefault();
                 return merk;
-            }
-            catch
-            {
-                return null;
-            }
+            
         }
 
         Collection<Store> core.IDALRepository<Store>.GetAll()
         {
             Collection<Store> results = new Collection<Store>(Entities.OrderBy(C => C.Name).ToList());
             return results;
-        }
-
-        public int Kali(int a, int b)
-        {
-            return a * b;
         }
 
         #region Not Implemented
@@ -89,10 +78,10 @@ namespace ecommerce.store.repository
 
         
 
-        System.Collections.ObjectModel.Collection<Store> core.IDALRepository<Store>.GetByCriteria(string criteria)
-        {
-            throw new NotImplementedException();
-        }
+        //System.Collections.ObjectModel.Collection<Store> core.IDALRepository<Store>.GetByCriteria(string criteria)
+        //{
+        //    throw new NotImplementedException();
+        //}
         #endregion
     }
 }

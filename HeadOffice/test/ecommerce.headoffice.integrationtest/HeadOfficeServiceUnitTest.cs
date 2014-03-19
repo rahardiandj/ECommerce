@@ -39,6 +39,15 @@ namespace ecommerce.headoffice.integrationtest
             Phone = "098985",
         };
 
+        private HeadOffice headOfficeInsert = new HeadOffice()
+        {
+            Id = new Guid("4CC4B154-0F16-49E0-AB9B-8D17354C4A15"),
+            Address = "Jl Sarimanah 40",
+            City = "Bandung",
+            Country = "Indonesia",
+            Name = "PT WhiteMail",
+        };
+
         private HeadOfficeDomain headOfficeDomainNull = new HeadOfficeDomain()
         {
             Id = new Guid("4FF4B154-0F16-49E0-AB9B-8D17354C4A13"),
@@ -51,6 +60,15 @@ namespace ecommerce.headoffice.integrationtest
         private HeadOfficeDomain headOfficeDomain = new HeadOfficeDomain()
         {
             Id = new Guid("4CC4B154-0F16-49E0-AB9B-8D17354C4A13"),
+            Address = "Jl Sarimanah 40",
+            City = "Bandung",
+            Country = "Indonesia",
+            Name = "PT WhiteMail",
+        };
+
+        private HeadOfficeDomain headOfficeDomainInsert = new HeadOfficeDomain()
+        {
+            Id = new Guid("4CC4B154-0F16-49E0-AB9B-8D17354C4A15"),
             Address = "Jl Sarimanah 40",
             City = "Bandung",
             Country = "Indonesia",
@@ -85,6 +103,7 @@ namespace ecommerce.headoffice.integrationtest
             service = new HeadOfficeDomainService(repository);
             repository.GetById(id1).Returns(headOffice1);
             headOffices.Add(headOffice1);
+            headOffices.Add(headOfficeInsert);
             repository.GetAll().Returns(headOffices);
         }
 
@@ -112,9 +131,21 @@ namespace ecommerce.headoffice.integrationtest
         }
 
         [Test]
+        public void InsertNotNullTest()
+        {
+            Assert.IsEmpty(service.Create(headOfficeDomainInsert).Messages);
+        }
+
+        [Test]
         public void UpdateTest()
         {
             Assert.IsEmpty(service.Update(headOfficeDomainExist).Messages);
+        }
+
+        [Test]
+        public void UpdateNotExistTest()
+        {
+            Assert.AreEqual(service.Update(headOfficeDomainInsert).Messages.FirstOrDefault().Value, "Data is not in Database");
         }
 
         [Test]

@@ -25,7 +25,7 @@ namespace ecommerce.core
             /// </summary>
             /// <param name="criteria">criteria for selection in string</param>
             /// <returns>Matching entities</returns>
-            Collection<T> GetByCriteria(string criteria);
+            //Collection<T> GetByCriteria(string criteria);
 
             /// <summary>
             /// Add entity to the repository.
