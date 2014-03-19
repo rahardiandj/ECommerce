@@ -69,7 +69,7 @@ namespace ecommerce.store.unittest
   
              //Check whether on database or not
              store = _repository.GetById(storeStub1.Id);
-             Assert.IsNotNull(store, "Data Head Office Baru Berhasil Terbuat");
+             Assert.IsNotNull(store, "Data Store Baru Berhasil Terbuat");
  
              //Delete so this method can be used again
             _repository.Delete(storeStub1);

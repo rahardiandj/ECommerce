@@ -73,14 +73,14 @@ namespace ecommerce.store
             return response;
         }
 
-        public StoreServiceResponse GetAllMerk()
+        public StoreServiceResponse GetAllStore()
         {
             StoreServiceResponse response = new StoreServiceResponse();
             Collection<Store> stores = _storeRepository.GetAll();
 
             if (stores.Count == 0)
             {
-                response.Messages.Add(new Message("Tidak Ada Merk Yang Terdaftar"));
+                response.Messages.Add(new Message("Tidak Ada Store Yang Terdaftar"));
             }
             else
             {
