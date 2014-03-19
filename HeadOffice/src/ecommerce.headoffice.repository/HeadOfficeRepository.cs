@@ -76,10 +76,10 @@ namespace ecommerce.headoffice.repository
             }
         }
 
-        System.Collections.ObjectModel.Collection<HeadOffice> IDALRepository<HeadOffice>.GetByCriteria(string criteria)
-        {
-            throw new NotImplementedException();
-        }
+        //System.Collections.ObjectModel.Collection<HeadOffice> IDALRepository<HeadOffice>.GetByCriteria(string criteria)
+        //{
+        //    throw new NotImplementedException();
+        //}
         #endregion
     }
 }

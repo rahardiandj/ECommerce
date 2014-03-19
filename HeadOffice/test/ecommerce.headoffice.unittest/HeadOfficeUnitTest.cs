@@ -44,6 +44,18 @@ namespace ecommerce.headoffice.unittest
             Phone = "098274"
         };
 
+        private HeadOffice headOfficeInsertStub1 = new HeadOffice()
+        {
+            Id = new Guid("2a2c57c3-361b-444b-b725-04215b49bc1c"),
+            Address = "Jl Majapahit",
+            City = "Cimahi",
+            Country = "Indonesia",
+            CreateDate = DateTime.Now,
+            CreatedBy = "Endang S",
+            Name = "PT Teen",
+            Phone = "098274"
+        };
+
         [SetUp]
         public void Initialization()
         {
@@ -69,8 +81,17 @@ namespace ecommerce.headoffice.unittest
         [Test]
         public void GetByIdHeadOfficeTest()
         {
+            //Add data 
+            _repository.Add(headOfficeStub1);
+            _repository.SaveChanges();
+
+            //Test case
             HeadOffice headoffice = _repository.GetById(headOfficeStub1.Id);
             Assert.IsNotNull(headoffice);
+
+            //Delete data
+            _repository.Delete(headOfficeStub1);
+            _repository.SaveChanges();
         }
 
         [Test]
@@ -120,6 +141,23 @@ namespace ecommerce.headoffice.unittest
             _repository.Update(headOfficeUpdateStub1);
             _repository.SaveChanges();
             headOffice = _repository.GetById(headOfficeUpdateStub1.Id);
+        }
+
+        [Test]
+        public void UpdateHeadOfficeTest()
+        {
+            //precondition
+            _repository.Add(headOfficeInsertStub1);
+            _repository.SaveChanges();
+
+            _repository.Update(headOfficeUpdateStub1);
+            _repository.SaveChanges();
+            headOffice = _repository.GetById(headOfficeUpdateStub1.Id);
+            Assert.AreEqual(headOffice.Address, headOfficeUpdateStub1.Address);
+
+            //delete data
+            _repository.Delete(headOfficeUpdateStub1);
+            _repository.SaveChanges();
         }
     }
 }

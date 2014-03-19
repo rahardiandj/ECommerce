@@ -99,10 +99,10 @@ namespace ecommerce.merk.repository
             }
         }
 
-        System.Collections.ObjectModel.Collection<Merk> IDALRepository<Merk>.GetByCriteria(string criteria)
-        {
-            throw new NotImplementedException();
-        }
+        //System.Collections.ObjectModel.Collection<Merk> IDALRepository<Merk>.GetByCriteria(string criteria)
+        //{
+        //    throw new NotImplementedException();
+        //}
         #endregion
     }
 }
