@@ -197,9 +197,9 @@
     <Diagrams>
       <Diagram Name="Model1">
         <EntityTypeShape EntityType="db_commerceModel.HeadOffice" Width="1.5" PointX="3.375" PointY="0.75" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="db_commerceModel.Store" Width="1.5" PointX="3.375" PointY="4.75" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="db_commerceModel.Store" Width="1.5" PointX="5.125" PointY="1.75" Height="2.3648893229166656" />
         <EntityTypeShape EntityType="db_commerceModel.Merk" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906249996" />
-        <EntityTypeShape EntityType="db_commerceModel.MarketArea" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="db_commerceModel.MarketArea" Width="1.5" PointX="7.75" PointY="0.625" Height="2.3648893229166656" />
       </Diagram>
     </Diagrams>
   </Designer>
