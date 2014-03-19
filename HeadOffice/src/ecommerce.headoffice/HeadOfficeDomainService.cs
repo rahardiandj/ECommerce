@@ -103,6 +103,7 @@ namespace ecommerce.headoffice
 
         private bool validateIsNotExist(Guid id)
         {
+            var x = _headOfficeRepository.GetById(id);
             return (_headOfficeRepository.GetById(id) == null);
         }
 

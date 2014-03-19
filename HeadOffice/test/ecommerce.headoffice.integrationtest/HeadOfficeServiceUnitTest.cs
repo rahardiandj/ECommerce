@@ -86,6 +86,7 @@ namespace ecommerce.headoffice.integrationtest
 
         private Collection<HeadOffice> headOffices = new Collection<HeadOffice>();
         private Guid id1 = new Guid("4CC4B154-0F16-49E0-AB9B-8D17354C4A13");
+        private Guid id2 = new Guid("4bb4b154-0f16-49e0-ab9b-8d17354c4a13");
 
         #endregion
 
@@ -102,6 +103,7 @@ namespace ecommerce.headoffice.integrationtest
             h = new HeadOfficeDomain();
             service = new HeadOfficeDomainService(repository);
             repository.GetById(id1).Returns(headOffice1);
+            repository.GetById(id2).Returns(headOffice1);
             headOffices.Add(headOffice1);
             headOffices.Add(headOfficeInsert);
             repository.GetAll().Returns(headOffices);
@@ -145,7 +147,7 @@ namespace ecommerce.headoffice.integrationtest
         [Test]
         public void UpdateNotExistTest()
         {
-            Assert.AreEqual(service.Update(headOfficeDomainInsert).Messages.FirstOrDefault().Value, "Data is not in Database");
+            Assert.AreEqual("Data is not in Database", service.Update(headOfficeDomainInsert).Messages.FirstOrDefault().Value);
         }
 
         [Test]

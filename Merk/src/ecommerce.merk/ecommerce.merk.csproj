@@ -44,8 +44,6 @@
     <Compile Include="aggregate\MerkDomain.cs" />
     <Compile Include="MerkDomainService.cs" />
     <Compile Include="entities\BrandId.cs" />
-    <Compile Include="exceptions\CodeBrandAlreadyExistException.cs" />
-    <Compile Include="exceptions\NullOrWhiteSpaceException.cs" />
     <Compile Include="parameters\CreateParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repositories\IMerkRepository.cs" />
