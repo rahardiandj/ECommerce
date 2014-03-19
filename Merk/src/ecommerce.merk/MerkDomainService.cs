@@ -1,7 +1,6 @@
 ﻿using ecommerce.merk.aggregate;
 using ecommerce.merk.entities;
 using ecommerce.merk.parameters;
-using ecommerce.merk.exceptions;
 using ecommerce.merk.repositories;
 using ecommerce.core;
 using ecommerce.datamodel;
@@ -71,18 +70,16 @@ namespace ecommerce.merk
         public MerkServiceResponse GetMerkById(string id)
         {
             MerkServiceResponse response = new MerkServiceResponse();
-
-            if (!validateIsNotExist(id))
+            
+            Merk merk = _merkRepository.GetById(id);
+            if (merk.Id == null)
             {
                 response.Messages.Add(new Message("Data is not in Database"));
             }
             else
             {
-                #region TO DO Create Unit Test
-                Merk merk = _merkRepository.GetById(id);
-                CreateParameter param = new CreateParameter(merk.Id, merk.Code, merk.Name,merk.Manufacture);
+                CreateParameter param = new CreateParameter(merk.Id, merk.Code, merk.Name, merk.Manufacture);
                 response.MerkDomain = MerkDomain.Create(param);
-                #endregion
             }
             return response;
         }
@@ -109,11 +106,6 @@ namespace ecommerce.merk
             return response;
         }
 
-        public void Delete(string ownerId, string code)
-        {
-            //MerkId id = new MerkId(ownerId, code);
-            //brandRepository.Remove(id);
-        }
         #endregion
 
         private bool validateIsNotExist(string id)

@@ -71,9 +71,21 @@ namespace ecommerce.merk.integrationtest
         }
 
         [Test]
+        public void InsertDataExisttest()
+        {
+            Assert.AreEqual("Data is already on database", service.Create(merkDomainExist).Messages.FirstOrDefault().Value);
+        }
+
+        [Test]
         public void Update()
         {
             Assert.IsEmpty(service.Update(merkDomainExist).Messages);
+        }
+
+        [Test]
+        public void UpdateNotExistTest()
+        {
+            Assert.AreEqual("Data is not in Database", service.Update(merkDomain).Messages.FirstOrDefault().Value);
         }
 
         [Test]
@@ -85,7 +97,7 @@ namespace ecommerce.merk.integrationtest
         [Test]
         public void GetMerkById()
         {
-            Assert.IsNotNull(service.GetMerkById("001"));
+            Assert.IsNotNull(service.GetMerkById("001").MerkDomain);
         }
         [Test]
         public void GetMerkIfNotExist()
